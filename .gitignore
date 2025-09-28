@@ -1,0 +1,15 @@
+cat > .gitignore <<EOL
+# Node.js / TypeScript API
+
+node_modules/
+dist/
+build/
+.env
+.env.*
+*.log
+*.tsbuildinfo
+.vscode/
+.DS_Store
+Thumbs.db
+EOL
+
