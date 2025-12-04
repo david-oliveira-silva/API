@@ -102,17 +102,7 @@ router.get("/users/:id", async (req, res) => {
         });
     }
 });
-// Criar a rota para cadastrar usuário 
-// Endereço para acessar a api através da aplicação externa com o verbo POST: http://localhost:8080/users
-// A aplicação externa deve indicar que está enviado os dados em formato de objeto: Content-Type: application/json
-// Dados em formato de objeto
-/*
-{
-    "name" : "Ricardo Gabriel",
-    "email" : "ricardo@ricardo.com.br",
-    "situation" : 1
-}
-*/
+
 router.post("/users", async (req, res) => {
     try {
         // Receber os dados enviados no corpo da requisição
@@ -160,17 +150,7 @@ router.post("/users", async (req, res) => {
         return res.status(500).json({ message: "Erro interno ao cadastrar o usuário" });
     }
 });
-// Criar a rota para editar um usuário
-// Endereço para acessar a API através da aplicação externa com o verbo PUT: http://localhost:8080/users/:id
-// A aplicação externa deve indicar que está enviado os dados em formato de objeto: Content-Type: application/json
-// Dados em formato de objeto
-/*
-{
-    "name": "gabriel",
-    "email" : "gabriel@ricardo.com.br",
-    "situation":1
-}
-*/
+
 router.put("/users/:id", async (req, res) => {
     try {
         // Obter o ID da situação a partir dos parâmetros da requisição
